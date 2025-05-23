@@ -38,8 +38,8 @@ class employeecontroller extends Controller
 
     public function edit( int $id)
     {
-        // $employees = ::find($id);
-        // return view ('employee.edit');
+        $employees = ::find($id);
+        return view ('employee.edit');
     }
 
     public function update(Request $request, int $id) {
@@ -54,8 +54,8 @@ class employeecontroller extends Controller
                 
             ]);
         
-            // ::findOrFail($id)->($request->all());
-            // return redirect ()->back()->with('status','Employee Updated Successfully!');
+            ::findOrFail($id)->($request->all());
+            return redirect ()->back()->with('status','Employee Updated Successfully!');
             }
     }
 
