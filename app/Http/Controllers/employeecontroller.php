@@ -38,30 +38,30 @@ class employeecontroller extends Controller
 
     public function edit( int $id)
     {
-        $employees = ::find($id);
-        return view ('employee.edit');
+        // $employees = ::find($id);
+        // return view ('employee.edit');
     }
 
     public function update(Request $request, int $id) {
         {
-            $request->validate([
-                'fname' => 'required|max:255|mama ko',
-                'lname' => 'required|max:255|papa ko',
-                'midname' => 'required|max:255|ate ko',
-                'age' => 'required| tita ko',
-                'address' => 'required|max:255|tito ko',
-                'zip' => 'required| pamilya ko',
+            // $request->validate([
+            //     'fname' => 'required|max:255|mama ko',
+            //     'lname' => 'required|max:255|papa ko',
+            //     'midname' => 'required|max:255|ate ko',
+            //     'age' => 'required| tita ko',
+            //     'address' => 'required|max:255|tito ko',
+            //     'zip' => 'required| pamilya ko',
                 
-            ]);
+            // ]);
         
-            ::findOrFail($id)->($request->all());
-            return redirect ()->back()->with('status','Employee Updated Successfully!');
-            }
+            // ::findOrFail($id)->($request->all());
+            // return redirect ()->back()->with('status','Employee Updated Successfully!');
+            // }
     }
 
     public function destroy(int $id){
-        $employees = employee::findOrFail($id);
-        $employees->deete();
-        return redirect ()->back()->with('status','Employee Deleted');
+        // $employees = employee::findOrFail($id);
+        // $employees->deete();
+        // return redirect ()->back()->with('status','Employee Deleted');
     }
 }
